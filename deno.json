@@ -1,0 +1,36 @@
+{
+  "tasks": {
+    "dev": "deno task dev:chrome",
+    "dev:core": "deno run -A --node-modules-dir npm:vite",
+    "dev:chrome": "TARGET=chrome deno task dev:core",
+    "dev:firefox": "TARGET=firefox deno task dev:core",
+    "build": "deno task build:chrome & deno task build:firefox",
+    "build:core": "deno run -A --node-modules-dir npm:vite build",
+    "build:chrome": "TARGET=chrome deno task build:core",
+    "build:firefox": "TARGET=firefox deno task build:core"
+  },
+  "compilerOptions": {
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "jsxImportSourceTypes": "@types/react"
+  },
+  "fmt": {
+    "useTabs": false,
+    "indentWidth": 2,
+    "semiColons": false,
+    "singleQuote": true
+  },
+  "imports": {
+    "@deno/vite-plugin": "npm:@deno/vite-plugin@^1.0.0",
+    "@types/react": "npm:@types/react@^18.3.11",
+    "@types/react-dom": "npm:@types/react-dom@^18.3.1",
+    "@types/webextension-polyfill": "npm:@types/webextension-polyfill@^0.12.1",
+    "@vitejs/plugin-react": "npm:@vitejs/plugin-react@^4.3.3",
+    "react": "npm:react@^18.3.1",
+    "react-dom": "npm:react-dom@^18.3.1",
+    "vite": "npm:vite@^5.4.9",
+    "vite-plugin-web-extension": "npm:vite-plugin-web-extension@^4.3.0",
+    "webextension-polyfill": "npm:webextension-polyfill@^0.12.0"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json.schemastore.org/webextension",
+  "manifest_version": 2,
+  "name": "deno-webext-starter",
+  "version": "1.0.0",
+  "description": "A starter template for a Deno web extension",
+  "background": {
+    "scripts": ["src/background/main.ts"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/content/main.ts"]
+    }
+  ],
+  "browser_action": {
+    "default_popup": "src/popup/index.html",
+    "default_icon": {
+      "16": "icon-512.png",
+      "48": "icon-512.png",
+      "128": "icon-512.png"
+    }
+  },
+  "options_ui": {
+    "page": "src/options/index.html",
+    "open_in_tab": true
+  },
+  "sidebar_action": {
+    "default_panel": "src/sidepanel/index.html",
+    "default_icon": {
+      "16": "icon-512.png",
+      "48": "icon-512.png",
+      "128": "icon-512.png"
+    }
+  },
+  "content_security_policy": "script-src 'self'; object-src 'self'",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "webNavigation",
+    "webRequest",
+    "webRequestBlocking",
+    "tabs"
+  ],
+  "icons": {
+    "16": "icon-512.png",
+    "48": "icon-512.png",
+    "128": "icon-512.png"
+  }
+}
