@@ -22,6 +22,11 @@
     "semiColons": false,
     "singleQuote": true
   },
+  "lint": {
+    "rules": {
+      "tags": ["recommended"]
+    }
+  },
   "exclude": ["node_modules", "dist", ".vite"],
   "imports": {
     "@deno/vite-plugin": "npm:@deno/vite-plugin@^1.0.0",

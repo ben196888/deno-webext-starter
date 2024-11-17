@@ -2,7 +2,7 @@
 import browser from 'webextension-polyfill'
 
 // Send a message to the background script when the page is loaded
-window.addEventListener('load', () => {
+globalThis.addEventListener('load', () => {
   browser.runtime.sendMessage({
     type: 'GREETINGS',
     payload: 'Hello from the content script!',
