@@ -1,6 +1,7 @@
 # Deno Webext Starter
 
-This is a starter template for building web extensions using Deno, Vite, and React. It provides a simple setup to get you started with writing your own web extension.
+This is a starter template for building web extensions using Deno, Vite, and React. It provides a simple setup to get
+you started with writing your own web extension.
 
 ## Prerequisites
 
@@ -97,7 +98,8 @@ This will build the extension for production. The output will be in the `dist` d
 
 ## Customization
 
-Feel free to customize the project to suit your needs. You can add more features, change the UI, or modify the build process.
+Feel free to customize the project to suit your needs. You can add more features, change the UI, or modify the build
+process.
 
 ## Contributing
 
