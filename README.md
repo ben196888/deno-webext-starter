@@ -92,8 +92,8 @@ This will build the extension for production. The output will be in the `dist` d
   - `popup/`: Popup UI
   - `options/`: Options page
   - `sidepanel/`: Side panel UI
-- `manifest.chrome.json`: Manifest file for Chrome
-- `manifest.firefox.json`: Manifest file for Firefox
+- `manifest.json`: Manifest file for both Chrome and Firefox. Using {{chrome}} and {{firefox}} to replace the browser
+  specific fields.
 - `vite.config.ts`: Vite configuration file
 
 ## Customization

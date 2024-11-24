@@ -16,7 +16,7 @@ export default defineConfig({
     deno(),
     react(),
     webExtension({
-      manifest: target === 'firefox' ? 'manifest.firefox.json' : 'manifest.chrome.json',
+      browser: target,
       transformManifest: (manifest) => {
         if (manifest.$schema) {
           delete manifest.$schema
