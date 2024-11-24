@@ -3,7 +3,9 @@
     "dev": "deno task dev:chrome",
     "dev:core": "deno run -A --node-modules-dir npm:vite",
     "dev:chrome": "TARGET=chrome deno task dev:core",
-    "dev:firefox": "TARGET=firefox deno task dev:core",
+    // https://github.com/denoland/deno/issues/27037
+    // "dev:firefox": "TARGET=firefox deno task dev:core",
+    "dev:firefox": "TARGET=firefox deno task build:firefox && npx web-ext run --source-dir dist/firefox",
     "build": "deno task build:chrome & deno task build:firefox",
     "build:core": "deno run -A --node-modules-dir npm:vite build",
     "build:chrome": "TARGET=chrome deno task build:core",

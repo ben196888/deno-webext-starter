@@ -69,6 +69,12 @@ deno task build:chrome
 deno task build:firefox
 ```
 
+##### Troubleshooting
+
+Vite Plugin Web Extension adds `http://localhost` to `content_security_policy.extension_pages[script-src]` in the
+manifest when running in dev mode. It leads firefox to block the extension. So we use the production build to test the
+extension in firefox.
+
 This will build the extension for production. The output will be in the `dist` directory.
 
 ## Load the Extension in Your Browser

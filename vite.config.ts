@@ -17,12 +17,6 @@ export default defineConfig({
     react(),
     webExtension({
       browser: target,
-      transformManifest: (manifest) => {
-        if (manifest.$schema) {
-          delete manifest.$schema
-        }
-        return manifest
-      },
     }),
   ],
 })
