@@ -102,6 +102,12 @@ This will build the extension for production. The output will be in the `dist` d
   specific fields.
 - `vite.config.ts`: Vite configuration file
 
+### Message Passing
+
+The starter template uses the `webext-bridge` package to simplify message passing between the background script, content
+scripts, and UI components. You can find more information about the package
+[here](https://serversideup.net/open-source/webext-bridge/docs)
+
 ## Customization
 
 Feel free to customize the project to suit your needs. You can add more features, change the UI, or modify the build
